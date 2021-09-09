@@ -21,3 +21,16 @@ Goa is Located on the **Western Ghats of Konkan**, Goa is known as the smallest 
   - Refreshments
   
   **[About Me](AboutMe.md)**
+
+  ---
+
+ # Food Items
+
+Below are the Items to get Refreshments
+
+| Food/Drinks | Location | Price |
+| :---: | :---: | :---: |
+| Butter Nan | Hydrabad | $15 |
+| Milk Shake | Warangal | $8 |
+| Kaju Barfi| Pistahouse | $7 |
+| chocolate ice cream| Hanamkonda | $22 |
