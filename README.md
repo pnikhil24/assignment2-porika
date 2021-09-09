@@ -61,15 +61,6 @@ struct node
     map<char,int> next;
 node (int l=0, int r=0, int par=-1)
         : l(l), r(r), par(par), link(-1) {}
-    int len()  {  return r - l;  }
-    int &get (char c) {
-        if (!next.count(c))  next[c] = -1;
-        return next[c];
-    }
-};
-node t[MAXN];
-int sz;
-
 struct state {
     int v, pos;
     state (int v, int pos) : v(v), pos(pos)  {}
@@ -83,19 +74,10 @@ state go (state st, int l, int r) {
             if (st.v == -1)  return st;
         }
         else {
-            if (s[ t[st.v].l + st.pos ] != s[l])
-                return state (-1, -1);
+
             if (r-l < t[st.v].len() - st.pos)
                 return state (st.v, st.pos + r-l);
             l += t[st.v].len() - st.pos;
-            st.pos = t[st.v].len();
         }
-    return st;
-}
-void build_tree() {
-    sz = 1;
-    for (int i=0; i<n; ++i)
-        tree_extend (i);
-}
 ```
 [Code Source](https://cp-algorithms.com/string/suffix-tree-ukkonen.htm)
