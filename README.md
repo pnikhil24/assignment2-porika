@@ -92,26 +92,6 @@ state go (state st, int l, int r) {
         }
     return st;
 }
-
-void tree_extend (int pos) {
-    for(;;)
-    
-     {
-        state nptr = go (ptr, pos, pos+1);
-        if (nptr.v != -1) {
-            ptr = nptr;
-            return;
-        }
-
-        int mid = split (ptr);
-        int leaf = sz++;
-        t[leaf] = node (pos, n, mid);
-        t[mid].get( s[pos] ) = leaf;
-
-        ptr.v = get_link (mid);
-        ptr.pos = t[ptr.v].len();
-}
-
 void build_tree() {
     sz = 1;
     for (int i=0; i<n; ++i)
