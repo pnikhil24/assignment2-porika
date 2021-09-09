@@ -61,6 +61,12 @@ struct node
     map<char,int> next;
 node (int l=0, int r=0, int par=-1)
         : l(l), r(r), par(par), link(-1) {}
+    int len()  {  return r - l;  }
+    int &get (char c) {
+        if (!next.count(c))  next[c] = -1;
+        return next[c];
+    }
+
 struct state {
     int v, pos;
     state (int v, int pos) : v(v), pos(pos)  {}
