@@ -93,28 +93,6 @@ state go (state st, int l, int r) {
     return st;
 }
 
-int split (state st) {
-    if (st.pos == t[st.v].len())
-        return st.v;
-    if (st.pos == 0)
-        return t[st.v].par;
-    node v = t[st.v];
-    int id = sz++;
-    t[id] = node (v.l, v.l+st.pos, v.par);
-    t[v.par].get( s[v.l] ) = id;
-    t[id].get( s[v.l+st.pos] ) = st.v;
-    t[st.v].par = id;
-    t[st.v].l += st.pos;
-    return id;
-}
-
-int get_link (int v) {
-    if (t[v].link != -1)  return t[v].link;
-    if (t[v].par == -1)  return 0;
-    int to = get_link (t[v].par);
-    return t[v].link = split (go (state(to,t[to].len()), t[v].l + (t[v].par==0), t[v].r));
-}
-
 void tree_extend (int pos) {
     for(;;)
     
@@ -132,8 +110,6 @@ void tree_extend (int pos) {
 
         ptr.v = get_link (mid);
         ptr.pos = t[ptr.v].len();
-        if (!mid)  break;
-    }
 }
 
 void build_tree() {
