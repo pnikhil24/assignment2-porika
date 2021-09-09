@@ -34,3 +34,11 @@ Below are the Items to get Refreshments
 | Milk Shake | Warangal | $8 |
 | Kaju Barfi| Pistahouse | $7 |
 | chocolate ice cream| Hanamkonda | $22 |
+
+---
+# Pithy Quotes
+
+
+>"An eye for eye only ends up making the whole world blind."<br/>
+>"The weak can never forgive. Forgiveness is the attribute of the strong."<br/>
+>―Mahatma Gandhi
