@@ -13,3 +13,9 @@ Goa is Located on the **Western Ghats of Konkan**, Goa is known as the smallest 
     2. After reaching Chichago airport you may use public/private transport or you may hire a rental car.
     3. Book a motel or hotel base upon your interest, but book anything near to your favorite spot to reach quickly.
 3. After refreshment, you are in your favorite place.
+
+# list of items that should be brought to the favorite place
+  - Clothes
+  - Food
+  - Money
+  - Refreshments
