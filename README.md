@@ -51,14 +51,15 @@ Below are the Items to get Refreshments
 [Quick Data Link](https://en.wikipedia.org/wiki/String_(computer_science))
 
 
+```
 sstring s;
 int n;
 
-struct node {
+struct node
+ {
     int l, r, par, link;
     map<char,int> next;
-
-    node (int l=0, int r=0, int par=-1)
+node (int l=0, int r=0, int par=-1)
         : l(l), r(r), par(par), link(-1) {}
     int len()  {  return r - l;  }
     int &get (char c) {
@@ -115,7 +116,9 @@ int get_link (int v) {
 }
 
 void tree_extend (int pos) {
-    for(;;) {
+    for(;;)
+    
+     {
         state nptr = go (ptr, pos, pos+1);
         if (nptr.v != -1) {
             ptr = nptr;
@@ -138,5 +141,5 @@ void build_tree() {
     for (int i=0; i<n; ++i)
         tree_extend (i);
 }
-
+```
 [Code Source](https://cp-algorithms.com/string/suffix-tree-ukkonen.htm)
